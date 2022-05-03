@@ -12,7 +12,6 @@ class Ninja {
 
     showStats = () =>{
         const {sayName, showStats, drinkSake, speakWisdom, ...stats} = this;
-        // console.log("this ->", this );
         console.log(stats);
     }
 
