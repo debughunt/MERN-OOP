@@ -14,6 +14,7 @@ class Unit extends Card{
 
     attack = target => {
         target.res = target.res - this.power;
+        return this;
     }
 }
 
@@ -29,10 +30,12 @@ class Effect extends Card{
             if(this.stat == "resilience"){
                 target.res = target.res + this.magnitude;
                 console.log(this.text)
+                return this;
             }
             else{
                 target.power = target.power + this.magnitude;
                 console.log(this.text)
+                return this;
             }
         } else {
             throw new Error( "Target must be a unit!" );
